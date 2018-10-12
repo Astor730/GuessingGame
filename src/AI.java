@@ -5,28 +5,23 @@ public class AI {
     {
         String userin = "";
         int guess = 50;
+        int lowerlimit = 50;
+        int upperlimit = 100;
+        int lowerlimit2 = 0;
+        int upperlimit2 = 50;
         Scanner usertype = new Scanner(System.in);
         System.out.println("Guess a number between 1 and 100");
         System.out.println("Type correct, higher or lower to continue the code correctly");
-        while (userin.equalsIgnoreCase("correct") != true)
+        while (userin.equalsIgnoreCase("correct"))
         {
-            System.out.println("Is your number " + guess + "?");
-            userin = usertype.nextLine();
-            if(userin.equalsIgnoreCase("correct"))
+            System.out.println("Is your number" + guess);
+            if (userin.equalsIgnoreCase("higher"))
             {
-                System.out.println("I guessed correctly");
-            }
-            else if(userin.equalsIgnoreCase("higher"))
-            {
-                guess = 75;
+                lowerlimit = (upperlimit - lowerlimit) + lowerlimit;
             }
             else if(userin.equalsIgnoreCase("lower"))
             {
-                guess = 25;
-            }
-            else
-            {
-                System.out.println("That's not a correct input");
+
             }
         }
 
